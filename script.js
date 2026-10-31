@@ -1,12 +1,12 @@
 // Wedding details: update these fields once the date, Muhurtham and venue are confirmed.
 const WEDDING = {
-  // Example: "2026-12-15T09:00:00+05:30"
-  dateTime: "",
-  displayDate: "Wedding date to be announced",
-  displayTime: "Muhurtham time to be announced",
-  venueName: "Venue to be announced",
-  venueCity: "City, Andhra Pradesh",
-  mapSearch: ""
+  // India Standard Time (IST). Confirm the year before publishing.
+  dateTime: "2026-12-31T03:45:00+05:30",
+  displayDate: "Thursday, 31 December 2026",
+  displayTime: "Muhurtham · 3:45 AM",
+  venueName: "Razam",
+  venueCity: "Vizianagaram, Andhra Pradesh",
+  mapSearch: "Razam, Vizianagaram, Andhra Pradesh"
 };
 const byId = id => document.getElementById(id);
 function applyWeddingDetails() {
