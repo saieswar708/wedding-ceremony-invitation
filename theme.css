@@ -17,3 +17,34 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var
 @media(max-width:700px){.hero{min-height:680px}.nav{padding:24px 40px 0}.nav-links{gap:13px}.nav-links a{font-size:.63rem}.hero-content{padding:53px 28px 78px}.section{padding:59px 19px}.intro{padding-top:68px;padding-bottom:68px}.couple-grid{gap:14px}.portrait{height:220px;width:100%}.person-card h3{font-size:1.5rem}.event-cards{grid-template-columns:1fr;gap:11px}.event-card{padding:23px 15px}.timeline-item{grid-template-columns:112px 30px 1fr;gap:12px}.timeline-time{font-size:.62rem}.timeline-item h3{font-size:1.36rem}.timeline-item p{font-size:.76rem}.wishes-wall{grid-template-columns:1fr}.hero:before{inset:12px}.hero:after{inset:19px}}
 @media(max-width:430px){.nav{padding:22px 33px 0}.brand{font-size:1.4rem}.nav-links{gap:9px}.nav-links a{font-size:.58rem}.hero h1{font-size:3.55rem}.couple-grid{grid-template-columns:1fr 25px 1fr;gap:7px}.portrait{height:176px}.portrait-flower{font-size:3rem}.portrait:before{width:130px;height:130px}.portrait:after{width:95px;height:95px}.person-card h3{font-size:1.2rem}.person-card p{font-size:.65rem}.ampersand{font-size:2rem}.hero-bottom{font-size:.46rem;gap:7px}.countdown{gap:13px}.countdown strong{font-size:2rem}.countdown span{font-size:.51rem}.timeline-item{grid-template-columns:1fr 28px 1.6fr;gap:8px}.timeline-time{font-size:.58rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.promo-track{animation:none}.petal{display:none}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* Wedding schedule refinements */
+.timeline-item {
+  padding: 23px 18px;
+  border: 1px solid #e7dcc9;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  background: rgba(255, 253, 248, .72);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.timeline-item:hover {
+  transform: translateY(-2px);
+  border-color: #c8a45d;
+  box-shadow: 0 9px 24px rgba(67, 29, 42, .07);
+}
+.timeline-item:not(:last-child) .timeline-dot:after { height: 58px; }
+.timeline-time { line-height: 1.7; letter-spacing: .035em; }
+.event-card {
+  border-radius: 3px;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(67, 29, 42, .10);
+}
+@media(max-width:700px) { .timeline-item { padding: 17px 12px; } }
+@media(prefers-reduced-motion:reduce) {
+  .timeline-item, .event-card { transition: none; }
+  .timeline-item:hover, .event-card:hover { transform: none; }
+}
